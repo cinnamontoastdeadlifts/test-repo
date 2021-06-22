@@ -17,7 +17,3 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello from Octo Organization
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
