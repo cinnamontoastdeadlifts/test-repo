@@ -34,11 +34,14 @@ jobs:
         path: folder_to_upload/ # Wildcards can be used to filter the files copied into the container. See: https://github.com/actions/upload-artifact
     - uses: veracode/veracode-uploadandscan-action@master # Run the uploadandscan action. Inputs are described above.
       with:
+        appname: 'meg-test'
         filepath: 'folder_to_upload/'
         vid: '${{ secrets.VERACODE_API_ID }}'
         vkey: '${{ secrets.VERACODE_API_KEY }}'
         createprofile: 'false'
         createsandbox: 'true'
-        sandboxname: 'meg_sandbox_test'
+        sandboxname: 'SANDBOXNAME'
         scantimeout: 15
+        exclude: '*.js'
+        include: '*.war'
         criticality: 'VeryHigh'
