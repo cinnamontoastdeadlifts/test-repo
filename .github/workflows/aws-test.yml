@@ -26,5 +26,5 @@ jobs:
       - uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: test deploy
-          template: https://s3.us-west-2.amazonaws.com/cloudformation-templates-us-west-2/Managed_EC2_Batch_Environment.template
+          template: https://s3.us-east-2.amazonaws.com/cloudformation-templates-us-east-2/Managed_EC2_Batch_Environment.template
         
